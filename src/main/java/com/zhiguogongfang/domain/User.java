@@ -15,10 +15,22 @@ public class User {
     public User(){
         super();
     }
-    public User( String name, Integer age, String sex) {
+
+
+    public User(String name, Integer age, String sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", sex='" + sex + '\'' +
+                '}';
     }
 
     public String getSex() {

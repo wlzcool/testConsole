@@ -6,5 +6,17 @@
     <insert id="save" parameterType="com.zhiguogongfang.domain.User" useGeneratedKeys="true">
         insert into tb_user(name,age,sex)values (#{name},#{age},#{sex})
     </insert>
+    <select id="selectUser" parameterType="int" resultType="User">
+    select * from tb_user where id=#{id}
+    </select>
+    <update id="updateUser" parameterType="User">
+        update tb_user set  name=#{name},age=#{age},sex =#{sex} where id=#{id}
+    </update>
+    <delete id="deleteUser">
+        delete from tb_user where id =#{id}
+    </delete>
+    <select id="selectUserMap" resultType="map">
+        select * from tb_user
+    </select>
 
 </mapper>
