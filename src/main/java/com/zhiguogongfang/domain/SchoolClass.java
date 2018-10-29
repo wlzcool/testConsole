@@ -1,9 +1,21 @@
 package com.zhiguogongfang.domain;
 
+import java.util.List;
+
 public class SchoolClass {
     private Integer id;
     private String name;
     private String userName;
+
+    private List<Student> students;
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
 
     public Integer getId() {
         return id;

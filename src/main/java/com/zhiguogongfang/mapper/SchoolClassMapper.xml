@@ -11,4 +11,16 @@
     <select id="selectClassList" resultMap="classResultMap">
         select * from tb_class
     </select>
+    <resultMap id="classWithStudentResultMap" type="SchoolClass">
+        <id property="id" column="id"/>
+        <result property="name" column="className"/>
+        <result property="userName" column="userName"/>
+        <collection property="students" javaType="ArrayList"
+                    column="id" ofType="Student"
+                    select="com.zhiguogongfang.mapper.StudentMapper.selectStudentListByClassId"/>
+    </resultMap>
+    <select id="selectClassById" resultMap="classWithStudentResultMap">
+        select * from tb_class where id=#{id}
+    </select>
+
 </mapper>

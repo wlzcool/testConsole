@@ -10,6 +10,7 @@
     <typeAliases>
         <typeAlias type="com.zhiguogongfang.domain.User" alias="User"/>
         <typeAlias type="com.zhiguogongfang.domain.SchoolClass" alias="SchoolClass"/>
+        <typeAlias type="com.zhiguogongfang.domain.Student" alias="Student"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -25,5 +26,6 @@
     <mappers>
         <mapper resource="com/zhiguogongfang/mapper/UserMapper.xml"/>
         <mapper resource="com/zhiguogongfang/mapper/SchoolClassMapper.xml"/>
+        <mapper resource="com/zhiguogongfang/mapper/StudentMapper.xml"/>
     </mappers>
 </configuration>

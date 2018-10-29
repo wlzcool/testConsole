@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhiguogongfang.mapper.StudentMapper">
+    <resultMap id="studentResultMap" type="Student">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+        <result property="sex" column="sex"/>
+        <association property="schoolClass" column="classid" javaType="SchoolClass"
+                     select="com.zhiguogongfang.mapper.SchoolClassMapper.selectClassById">
+        </association>
+    </resultMap>
+    <select id="selectStudentList" resultMap="studentResultMap">
+        select * from tb_student
+    </select>
+    <select id="selectStudentListByClassId" resultType="Student">
+        select * from tb_student where classid=#{id}
+    </select>
+</mapper>
