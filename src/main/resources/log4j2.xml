@@ -6,7 +6,7 @@
         </Console>
     </appenders>
     <loggers>
-        <logger name="com.zhiguogongfang.mapper.UserMapper" level="DEBUG" additivity="false">
+        <logger name="com.zhiguogongfang.mapper" level="DEBUG" additivity="false">
             <appender-ref ref="Console"/>
         </logger>
         <root level="info">

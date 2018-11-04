@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhiguogongfang.mapper.UniversityMapper">
+    <resultMap id="universityAttributeMap" type="University">
+        <id property="id" column="uid"/>
+        <result property="name" column="uname"/>
+        <collection property="attributes" ofType="Attribute" fetchType="lazy">
+            <id property="id" column="aid"/>
+            <result property="name" column="aname"/>
+        </collection>
+    </resultMap>
+    <select id="selectUniversityAttribute" resultMap="universityAttributeMap">
+        select u.id as uid,u.name as uname,a.id as aid ,a.name as aname from tb_university u inner join tb_universityattribute ua on u.id = ua.universityid
+        inner join tb_attribute a on ua.attributeid = a.id
+    </select>
+    <select id="selectUniversityList" resultType="University">
+        select * from tb_university
+
+    </select>
+    <delete id="deleteUniversityAttribute" parameterType="UniversityAttribute">
+        delete from tb_universityattribute where universityid=#{university.id} and attributeid=#{attribute.id}
+    </delete>
+</mapper>

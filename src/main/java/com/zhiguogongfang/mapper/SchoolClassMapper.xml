@@ -16,7 +16,7 @@
         <result property="name" column="className"/>
         <result property="userName" column="userName"/>
         <collection property="students" javaType="ArrayList"
-                    column="id" ofType="Student"
+                    column="id" ofType="Student" fetchType="lazy"
                     select="com.zhiguogongfang.mapper.StudentMapper.selectStudentListByClassId"/>
     </resultMap>
     <select id="selectClassById" resultMap="classWithStudentResultMap">

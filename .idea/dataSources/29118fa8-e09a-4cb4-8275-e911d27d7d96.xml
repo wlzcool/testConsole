@@ -1105,92 +1105,205 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="278" parent="3" name="tb_class">
+    <table id="278" parent="3" name="tb_attribute">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="279" parent="3" name="tb_student">
+    <table id="279" parent="3" name="tb_class">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="280" parent="3" name="tb_user">
+    <table id="280" parent="3" name="tb_student">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="281" parent="278" name="id">
+    <table id="281" parent="3" name="tb_studentsubject">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="282" parent="3" name="tb_subject">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="283" parent="3" name="tb_university">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="284" parent="3" name="tb_universityattribute">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="285" parent="3" name="tb_user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="286" parent="278" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="278" name="className">
+    <column id="287" parent="278" name="name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="278" name="userName">
-      <Position>3</Position>
-      <DataType>varchar(20)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="284" parent="278" name="PRIMARY">
+    <key id="288" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="285" parent="279" name="id">
+    <column id="289" parent="279" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="279" name="name">
+    <column id="290" parent="279" name="className">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="279" name="age">
+    <column id="291" parent="279" name="userName">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="292" parent="279" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="293" parent="280" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="294" parent="280" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="280" name="age">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="279" name="sex">
+    <column id="296" parent="280" name="sex">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="279" name="classid">
+    <column id="297" parent="280" name="classid">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="290" parent="279" name="PRIMARY">
+    <key id="298" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="291" parent="280" name="id">
+    <column id="299" parent="281" name="studentid">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="300" parent="281" name="subjectid">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="301" parent="282" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="280" name="name">
+    <column id="302" parent="282" name="name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="280" name="sex">
+    <key id="303" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="304" parent="283" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="305" parent="283" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="306" parent="283" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="307" parent="284" name="universityid">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="308" parent="284" name="attributeid">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="309" parent="284" name="tb_universityattribute_universityid_attributeid_pk">
+      <ColNames>universityid
+attributeid</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="310" parent="284" name="tb_universityattribute_tb_attribute_id_fk">
+      <ColNames>attributeid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="311" parent="284" name="tb_universityattribute_universityid_attributeid_pk">
+      <ColNames>universityid
+attributeid</ColNames>
+      <UnderlyingIndexName>tb_universityattribute_universityid_attributeid_pk</UnderlyingIndexName>
+    </key>
+    <foreign-key id="312" parent="284" name="tb_universityattribute_tb_university_id_fk">
+      <ColNames>universityid</ColNames>
+      <RefSchemaName>mybatis</RefSchemaName>
+      <RefTableName>tb_university</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="313" parent="284" name="tb_universityattribute_tb_attribute_id_fk">
+      <ColNames>attributeid</ColNames>
+      <RefSchemaName>mybatis</RefSchemaName>
+      <RefTableName>tb_attribute</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="314" parent="285" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="285" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="316" parent="285" name="sex">
       <Position>3</Position>
       <DataType>varchar(2)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="280" name="age">
+    <column id="317" parent="285" name="age">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="295" parent="280" name="PRIMARY">
+    <key id="318" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
